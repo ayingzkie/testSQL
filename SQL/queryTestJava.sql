@@ -1,0 +1,1 @@
+select *, count(*) from `testdb_2017-01-01t15:00:00.000+08:00` where (`date` BETWEEN '2017-01-01 15:00:00' AND '2017-01-01 15:59:59') group by ip having count(*) >= 200;
