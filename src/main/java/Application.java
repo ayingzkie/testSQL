@@ -113,6 +113,8 @@ public class Application {
 
         }
 
+        statement.close();
+
 
         System.out.println("Querying from database.....");
 
@@ -132,6 +134,7 @@ public class Application {
                     System.out.println(ip);
             }
 
+
         }else if(duration.equals("daily")){
             prepStmt.setString(1, df2.print(date));
             prepStmt.setString(2, df2.print(date.plusDays(1)));
@@ -143,8 +146,10 @@ public class Application {
 
                 System.out.println(ip);
             }
+
         }
 
+        prepStmt.close();
 
 
 
